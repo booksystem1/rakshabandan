@@ -1,6 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import { Head } from 'next/document'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +18,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Raksha Bandhan 2023-Blog</title>
+        <meta
+          name="description"
+          content="Celebrate Raksha Bandhan's timeless bond of love and protection with meaningful traditions and heartfelt exchanges."
+        />
+         <meta
+          name="keywords"
+          content="raksha bandhan, happy raksha bandhan, raksha bandhan 2023, happy raksha bandhan 2023"
+        />
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      />
+
+      <Script id="google-analytics-script" strategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+          page_path: window.location.pathname,
+          });
+    `}
+      </Script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
