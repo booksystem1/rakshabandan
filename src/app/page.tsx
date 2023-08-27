@@ -4,6 +4,8 @@ import styles from './page.module.css'
 import Script from 'next/script'
 import { Head } from 'next/document'
 import { Blog1 } from '@/app/components'
+import 'bootstrap/dist/css/bootstrap.css'
+
 
 export default function Home() {
   return (

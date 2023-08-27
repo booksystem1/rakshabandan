@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from 'next/head';
+
 const Blog1 = () => {
   return (<>
     
@@ -90,8 +91,8 @@ const Blog1 = () => {
                 src="/raksha-bandhan-2023.png"
                 alt="raksha bandhan 2023" 
                 className="my-5"
-                width={1080}
-                height={600}
+                width={920}
+                height={493}
               />
             </div>
           </div>
