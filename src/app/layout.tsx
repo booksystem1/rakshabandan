@@ -29,11 +29,11 @@ export default function RootLayout({
           content="raksha bandhan, happy raksha bandhan, raksha bandhan 2023, happy raksha bandhan 2023"
         />
       <Script
-        strategy="lazyOnload"
+        
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
       />
 
-      <Script id="google-analytics-script" strategy="lazyOnload">
+      <Script id="google-analytics-script" >
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
